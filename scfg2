@@ -1,0 +1,43 @@
+<R> 		:  <FL> <base>		{1.000};
+<FL>         :  <base> <LL>     {0.3333}
+        | <FL> <base>           {0.6667};
+<LL>        : <base> <LL>          {0.667}
+        | <base> <S>            {0.333};
+<L>	        :<L> <base>   {0.5}
+    	| A				{0.125}
+		| C				{0.125}
+		| G				{0.125}
+		| U				{0.125};
+<S> 		:  <baseA> <S-and-baseU>		{0.153548387}
+        | <baseU> <S-and-baseA>     {0.153548387}
+		| <baseC> <S-and-baseG>		{0.225806451}
+		| <baseG> <S-and-baseC>     {0.225806451}
+		| <baseG> <S-and-baseU>		{0.72258064}
+		| <baseU> <S-and-baseG>		{0.72258064}
+		| <base> <B>				{0.032258065}
+		| <B> <base>				{0.032258065}
+		| <L> <base>				{0.032258065};
+<B>         :  <baseA> <S-and-baseU>      {0.085}
+        | <baseU> <S-and-baseA>     {0.085}
+		| <baseG> <S-and-baseC>     {0.125}
+		| <baseC> <S-and-baseG>     {0.125}
+		| <baseG> <S-and-baseU>     {0.04}
+		| <baseU> <S-and-baseG>     {0.04}
+		| <B> <base>             {0.25}
+        | <base> <B>             {0.25};
+<S-and-baseA>	: <S> <baseA>			{1.000};
+<S-and-baseC>	: <S> <baseC>			{1.000};
+<S-and-baseG>	: <S> <baseG>			{1.000};
+<S-and-baseU>	: <S> <baseU>			{1.000};
+<B-and-baseA>	: <B> <baseA>			{1.000};
+<B-and-baseC>	: <B> <baseC>			{1.000};
+<B-and-baseG>	: <B> <baseG>			{1.000};
+<B-and-baseU>	: <B> <baseU>			{1.000};
+<baseA>		: A				{1.000};
+<baseC>		: C				{1.000};
+<baseG>		: G				{1.000};
+<baseU>		: U				{1.000};
+<base>		: A				{0.25}
+		| C				{0.25}
+		| G				{0.25}
+		| U				{0.25};
